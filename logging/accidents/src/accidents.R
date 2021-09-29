@@ -19,9 +19,6 @@ paste(opt$data_folder)
 mlflow_set_tracking_uri(mlflow_get_azureml_tracking_uri())
 mlflow_set_tag("test", "tagging" , run_id=Sys.getenv("AZUREML_RUN_ID"))
 
-
-Sys.getenv()
-
 accidents <- readRDS(file.path(opt$data_folder, "accidents.Rd"))
 summary(accidents)
 
