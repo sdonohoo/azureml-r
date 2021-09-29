@@ -16,4 +16,4 @@ environment:
 compute: 
   target: azureml:cpu-cluster
 experiment_name: r-accidents-example
-description: Train a GLM using R on the accidents dataset.  
+description: Train a GLM using R on the accidents dataset with MLflow logging.  
