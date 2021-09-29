@@ -3,9 +3,6 @@ library(mlflow)
 library(carrier)
 library(azureml.mlflow)
 
-# Source AzureML MLflow helper functions. TO-DO: wrap in R package
-#source('AzuremlMlflow.R')
-
 options <- list(
   make_option(c("-d", "--data_folder"), default="./data")
 )
@@ -17,6 +14,8 @@ paste(opt$data_folder)
 
 # Enable mlflow logging to Azure by setting tracking uri to correct AzureML tracking uri
 mlflow_set_tracking_uri(mlflow_get_azureml_tracking_uri())
+
+# Test dummy experiment tag
 mlflow_set_tag("test", "tagging" , run_id=Sys.getenv("AZUREML_RUN_ID"))
 
 accidents <- readRDS(file.path(opt$data_folder, "accidents.Rd"))
