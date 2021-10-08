@@ -1,12 +1,10 @@
 name: logging-accidents-job
 on:
   schedule:
-    - cron: "0 0/4 * * *"
+    - cron: "0 0/2 * * *"
   pull_request:
     branches:
       - main
-      - cli-preview
-      - releases/current
     paths:
       - logging/accidents/**
       - .github/workflows/logging-accidents-job.yml
