@@ -9,7 +9,7 @@ az extension add -n ml -y
 # </az_ml_install>
 
 # <az_group_create>
-az group create -n "azureml-r-examples-rg" -l "southcentral"
+az group create -n "azureml-r-examples-rg" -l "southcentralus"
 # </az_group_create>
 
 # <az_configure_defaults>

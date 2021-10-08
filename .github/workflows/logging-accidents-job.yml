@@ -1,14 +1,7 @@
 name: logging-accidents-job
 on:
   schedule:
-    - cron: "0 0/2 * * *"
-  push:
-    branches:
-      - sdonohoo-dev
-    paths:
-      - logging/accidents/**
-      - .github/workflows/logging-accidents-job.yml
-      - utils/setup.sh
+    - cron: "0 0/4 * * *"
   pull_request:
     branches:
       - main
