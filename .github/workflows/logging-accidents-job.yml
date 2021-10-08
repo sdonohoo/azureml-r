@@ -2,6 +2,13 @@ name: logging-accidents-job
 on:
   schedule:
     - cron: "0 0/2 * * *"
+  push:
+    branches:
+      - sdonohoo-dev
+    paths:
+      - logging/accidents/**
+      - .github/workflows/logging-accidents-job.yml
+      - utils/setup.sh
   pull_request:
     branches:
       - main
@@ -20,8 +27,8 @@ jobs:
       with:
         creds: ${{secrets.AZ_AE_CREDS}}
     - name: setup
-      run: bash utils/setup.sh
-      working-directory: logging
+      run: bash setup.sh
+      working-directory: utils
       continue-on-error: true
     - name: create job
       run: |
