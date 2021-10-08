@@ -27,8 +27,8 @@ jobs:
       with:
         creds: ${{secrets.AZ_AE_CREDS}}
     - name: setup
-      run: bash utils/setup.sh
-      working-directory: logging
+      run: bash setup.sh
+      working-directory: utils
       continue-on-error: true
     - name: create job
       run: |
