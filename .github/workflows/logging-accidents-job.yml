@@ -1,7 +1,7 @@
 name: logging-accidents-job
 on:
   schedule:
-    - cron: "0 0/4 * * *"
+    - cron: "0 0 * * *"
   pull_request:
     branches:
       - main
